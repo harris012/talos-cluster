@@ -6,7 +6,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 30m
-  url: "ssh://git@github.com:harris012/talos-cluster.git"
+  url: "ssh://github.com/harris012/talos-cluster"
   ref:
     branch: "main"
   ignore: |
