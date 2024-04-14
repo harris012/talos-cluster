@@ -6,13 +6,13 @@ talosVersion: v1.6.7
 kubernetesVersion: v1.29.3
 
 clusterName: &cluster k8s
-endpoint: https://192.168.0.156:6443
+endpoint: https://192.168.0.163:6443
 clusterPodNets:
   - "10.69.0.0/16"
 clusterSvcNets:
   - "10.96.0.0/16"
 additionalApiServerCertSans: &sans
-  - "192.168.0.156"
+  - "192.168.0.163"
   - 127.0.0.1 # KubePrism
 additionalMachineCertSans: *sans
 cniConfig:
@@ -36,7 +36,7 @@ nodes:
           - network: 0.0.0.0/0
             gateway: "192.168.0.1"
         vip:
-          ip: "192.168.0.156"
+          ip: "192.168.0.163"
   - hostname: "k8s-worker"
     ipAddress: "192.168.0.155"
     installDiskSelector:
