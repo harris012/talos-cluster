@@ -23,9 +23,7 @@ nodes:
     ipAddress: "192.168.0.156"
     installDiskSelector:
       serial: "50026B7684AA71F9"
-    machineSpec:
-      secureboot: true
-    talosImageURL: factory.talos.dev/installer-secureboot/6b3eb6bcd9ebc6eea627f9f0c4f19227e9e7273086ccee921899654684843c7d
+    talosImageURL: factory.talos.dev/installer/6b3eb6bcd9ebc6eea627f9f0c4f19227e9e7273086ccee921899654684843c7d
     controlPlane: true
     networkInterfaces:
       - deviceSelector:
@@ -43,9 +41,7 @@ nodes:
     ipAddress: "192.168.0.155"
     installDiskSelector:
       serial: "50026B7381F2B73B"
-    machineSpec:
-      secureboot: true
-    talosImageURL: factory.talos.dev/installer-secureboot/6b3eb6bcd9ebc6eea627f9f0c4f19227e9e7273086ccee921899654684843c7d
+    talosImageURL: factory.talos.dev/installer/6b3eb6bcd9ebc6eea627f9f0c4f19227e9e7273086ccee921899654684843c7d
     controlPlane: false
     networkInterfaces:
       - deviceSelector:
@@ -132,20 +128,6 @@ patches:
             source: /var/openebs/local
             options: ["bind", "rshared", "rw"]
 
-  # Encrypt system disk with TPM
-  - |-
-    machine:
-      systemDiskEncryption:
-        ephemeral:
-          provider: luks2
-          keys:
-            - slot: 0
-              tpm: {}
-        state:
-          provider: luks2
-          keys:
-            - slot: 0
-              tpm: {}
 
 
 controlPlane:
