@@ -22,7 +22,7 @@ nodes:
   - hostname: "k8s"
     ipAddress: "192.168.0.156"
     installDisk: "/dev/nvme0n1"
-    talosImageURL: factory.talos.dev/installer/6b3eb6bcd9ebc6eea627f9f0c4f19227e9e7273086ccee921899654684843c7d
+    talosImageURL: factory.talos.dev/installer/5b3717ebb1bc80ddea39bb8ae3cfd3294bfcfb13e05dcd6f1aa54b8e8f9dbcc1
     controlPlane: true
     networkInterfaces:
       - deviceSelector:
@@ -39,7 +39,7 @@ nodes:
   - hostname: "k8s-worker"
     ipAddress: "192.168.0.155"
     installDisk: "/dev/nvme0n1"
-    talosImageURL: factory.talos.dev/installer/6b3eb6bcd9ebc6eea627f9f0c4f19227e9e7273086ccee921899654684843c7d
+    talosImageURL: factory.talos.dev/installer/5b3717ebb1bc80ddea39bb8ae3cfd3294bfcfb13e05dcd6f1aa54b8e8f9dbcc1
     controlPlane: false
     networkInterfaces:
       - deviceSelector:
