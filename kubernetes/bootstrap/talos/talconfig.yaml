@@ -3,7 +3,7 @@
 # renovate: datasource=docker depName=ghcr.io/siderolabs/installer
 talosVersion: v1.7.0
 # renovate: datasource=docker depName=ghcr.io/siderolabs/kubelet
-kubernetesVersion: v1.29.3
+kubernetesVersion: v1.30.0
 
 clusterName: &cluster k8s
 endpoint: https://192.168.0.163:6443
@@ -36,7 +36,7 @@ nodes:
             gateway: "192.168.0.1"
         vip:
           ip: "192.168.0.163"
-  - hostname: "k8s-worker"
+  - hostname: "k8s-w01"
     ipAddress: "192.168.0.155"
     installDisk: "/dev/nvme0n1"
     talosImageURL: factory.talos.dev/installer/5b3717ebb1bc80ddea39bb8ae3cfd3294bfcfb13e05dcd6f1aa54b8e8f9dbcc1

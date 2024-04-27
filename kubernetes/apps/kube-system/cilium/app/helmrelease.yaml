@@ -33,6 +33,8 @@ spec:
     cluster:
       id: 1
       name: k8s
+    cni:
+      exclusive: false
     containerRuntime:
       integration: containerd
     # NOTE: devices might need to be set if you have more than one active NIC on your hosts
@@ -68,11 +70,7 @@ spec:
         ingress:
           enabled: true
           className: internal
-          hosts:
-            - "hubble.${SECRET_DOMAIN}"
-          tls:
-            - hosts:
-                - "hubble.${SECRET_DOMAIN}"
+          hosts: ["hubble.${SECRET_DOMAIN}"]
     ipam:
       mode: kubernetes
     ipv4NativeRoutingCIDR: "${CLUSTER_CIDR}"
@@ -84,7 +82,7 @@ spec:
       enabled: true
     loadBalancer:
       algorithm: maglev
-      mode: dsr
+      mode: snat
     localRedirectPolicy: true
     operator:
       replicas: 1

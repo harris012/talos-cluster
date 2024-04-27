@@ -1,3 +1,3 @@
 ---
-providerRegex: ^(k8s|k8s-worker)$
+providerRegex: ^(k8s|k8s-w01)$
 bypassDnsResolution: true
