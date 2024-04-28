@@ -98,7 +98,6 @@ patches:
     machine:
       network:
         nameservers:
-          - 192.168.0.104
 
   # Configure NTP
   - |-
