@@ -171,31 +171,6 @@ You have two different options for setting up your local workstation.
 > [!NOTE]
 > For **Talos** skip ahead to ⛵ [**Stage 5**](#-stage-5-install-kubernetes)
 
-#### k3s
-
-📍 _Here we will be running an Ansible playbook to prepare your nodes for running a Kubernetes cluster._
-
-1. Ensure you are able to SSH into your nodes from your workstation using a private SSH key **without a passphrase** (for example using a SSH agent). This lets Ansible interact with your nodes.
-
-3. Install the Ansible dependencies
-
-    ```sh
-    task ansible:deps
-    ```
-
-4. Verify Ansible can view your config and ping your nodes
-
-    ```sh
-    task ansible:list
-    task ansible:ping
-    ```
-
-5. Run the Ansible prepare playbook (nodes wil reboot when done)
-
-    ```sh
-    task ansible:run playbook=cluster-prepare
-    ```
-
 6. Continue on to ⛵ [**Stage 5**](#-stage-5-install-kubernetes)
 
 ### ⛵ Stage 5: Install Kubernetes
