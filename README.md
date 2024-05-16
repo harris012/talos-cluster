@@ -185,14 +185,6 @@ You have two different options for setting up your local workstation.
 
 2. ⚠️ It might take a while for the cluster to be setup (10+ minutes is normal), during which time you will see a variety of error messages like: "couldn't get current server API group list," "error: no matching resources found", etc. This is a normal. If this step gets interrupted, e.g. by pressing <kbd>Ctrl</kbd> + <kbd>C</kbd>, you likely will need to [nuke the cluster](#-Nuke) before trying again.
 
-#### k3s
-
-1. Install Kubernetes depending on the distribution you chose
-
-    ```sh
-    task ansible:run playbook=cluster-installation
-    ```
-
 #### Cluster validation
 
 1. The `kubeconfig` for interacting with your cluster should have been created in the root of your repository.
