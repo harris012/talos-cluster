@@ -48,8 +48,6 @@ Hopefully some of this peeked your interests!  If you are marching forward, now 
 
 3. Flash the iso or raw file to a USB drive and boot to Talos on your nodes with it.
 
-4. Continue on to 🚀 [**Getting Started**](#-getting-started)
-
 
 ## 🚀 Getting Started
 
