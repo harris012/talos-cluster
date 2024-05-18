@@ -162,17 +162,6 @@ You have two different options for setting up your local workstation.
     git push
     ```
 
-5.  Continue on to ⚡ [**Stage 4**](#-stage-4-prepare-your-nodes-for-kubernetes)
-
-### ⚡ Stage 4: Prepare your nodes for Kubernetes
-
-> [!NOTE]
-> For **Talos** skip ahead to ⛵ [**Stage 5**](#-stage-5-install-kubernetes)
-
-6. Continue on to ⛵ [**Stage 5**](#-stage-5-install-kubernetes)
-
-### ⛵ Stage 5: Install Kubernetes
-
 #### Talos
 
 1. Deploy your cluster and bootstrap it. This generates secrets, generates the config files for your nodes and applies them. It bootstraps the cluster afterwards, fetches the kubeconfig file and installs Cilium and kubelet-csr-approver. It finishes with some health checks.
