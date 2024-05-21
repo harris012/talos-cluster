@@ -295,8 +295,6 @@ By default Flux will periodically check your git repository for changes. In orde
 There might be a situation where you want to destroy your Kubernetes cluster. This will completely clean the OS of all traces of the Kubernetes distribution you chose and then reboot the nodes.
 
 ```sh
-# k3s: Remove all traces of k3s from the nodes
-task ansible:run playbook=cluster-nuke
 # Talos: Reset your nodes back to maintenance mode and reboot
 task talos:soft-nuke
 # Talos: Comletely format your the Talos installation and reboot
