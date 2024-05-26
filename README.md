@@ -384,9 +384,5 @@ If this repo is too hot to handle or too cold to hold check out these following 
 
 ## ⭐ Stargazers
 
-<div align="center">
 
-[![Star History Chart](https://api.star-history.com/svg?repos=onedr0p/cluster-template&type=Date)](https://star-history.com/#onedr0p/cluster-template&Date)
-
-</div>
 
