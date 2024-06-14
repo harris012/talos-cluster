@@ -6,11 +6,13 @@ metadata:
   namespace: flux-system
 spec:
   interval: 30m
-  url: "ssh://git@github.com/harris012/talos-cluster.git"
+  url: "#{ bootstrap_github_address }#"
+  #% if bootstrap_github_private_key %#
   secretRef:
     name: github-deploy-key
+  #% endif %#
   ref:
-    branch: "main"
+    branch: "#{ bootstrap_github_branch|default('main', true) }#"
   ignore: |
     # exclude all
     /*
