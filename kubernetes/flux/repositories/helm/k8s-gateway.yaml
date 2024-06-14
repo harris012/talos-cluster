@@ -1,6 +1,5 @@
-#% if bootstrap_cloudflare.enabled %#
 ---
-apiVersion: source.toolkit.fluxcd.io/v1
+apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
   name: k8s-gateway
@@ -8,4 +7,3 @@ metadata:
 spec:
   interval: 1h
   url: https://ori-edge.github.io/k8s_gateway
-#% endif %#

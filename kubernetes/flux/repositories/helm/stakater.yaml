@@ -1,10 +1,9 @@
 ---
-apiVersion: source.toolkit.fluxcd.io/v1
+apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
-  name: spegel
+  name: stakater
   namespace: flux-system
 spec:
-  type: oci
-  interval: 5m
-  url: oci://ghcr.io/spegel-org/helm-charts
+  interval: 1h
+  url: https://stakater.github.io/stakater-charts
