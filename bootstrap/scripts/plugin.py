@@ -6,25 +6,15 @@ from typing import Any
 
 from typing import Any
 from netaddr import IPNetwork
+from bcrypt import hashpw, gensalt
 
 import makejinja
 import validation
 
-
-# Return the filename of a path without the j2 extension
-def basename(value: str) -> str:
-    return Path(value).stem
+def encrypt(value: str) -> str:
+    return hashpw(value.encode(), gensalt(rounds=10)).decode("ascii")
 
 
-# Return a list of files in the talos patches directory
-def talos_patches(value: str) -> list[str]:
-    path = Path(f'bootstrap/templates/kubernetes/bootstrap/talos/patches/{value}')
-    if not path.is_dir():
-        return []
-    return [str(f) for f in sorted(path.glob('*.yaml.j2')) if f.is_file()]
-
-
-# Return the nth host in a CIDR range
 def nthhost(value: str, query: int) -> str:
     value = IPNetwork(value)
     try:
@@ -64,11 +54,7 @@ class Plugin(makejinja.plugin.Plugin):
 
 
     def filters(self) -> makejinja.plugin.Filters:
-        return [basename, nthhost]
-
-
-    def functions(self) -> makejinja.plugin.Functions:
-        return [talos_patches]
+        return [encrypt, nthhost]
 
 
     def path_filters(self):
