@@ -19,6 +19,7 @@
         "terminal.integrated.defaultProfile.linux": "fish"
       },
       "extensions": [
+        "redhat.ansible",
         "redhat.vscode-yaml"
       ]
     }

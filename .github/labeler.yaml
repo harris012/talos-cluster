@@ -1,4 +1,7 @@
 ---
+area/ansible:
+  - changed-files:
+      - any-glob-to-any-file: ansible/**/*
 area/bootstrap:
   - changed-files:
       - any-glob-to-any-file: bootstrap/**/*

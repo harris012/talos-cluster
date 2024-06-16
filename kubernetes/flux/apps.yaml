@@ -22,10 +22,10 @@ spec:
       - kind: Secret
         name: cluster-secrets
       - kind: ConfigMap
-        name: cluster-user-settings
+        name: cluster-settings-user
         optional: true
       - kind: Secret
-        name: cluster-user-secrets
+        name: cluster-secrets-user
         optional: true
   patches:
     - patch: |-
@@ -45,10 +45,10 @@ spec:
               - kind: Secret
                 name: cluster-secrets
               - kind: ConfigMap
-                name: cluster-user-settings
+                name: cluster-settings-user
                 optional: true
               - kind: Secret
-                name: cluster-user-secrets
+                name: cluster-secrets-user
                 optional: true
       target:
         group: kustomize.toolkit.fluxcd.io
