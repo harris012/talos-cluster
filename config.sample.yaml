@@ -210,3 +210,8 @@ bootstrap_cloudflare:
 #   #   Ref: https://github.com/onedr0p/cluster-template/issues/1148
 #   # Keep in mind that Cilium does not currently support IPv6 L2 announcements.
 #   dual_stack_ipv4_first: false
+
+# (Required )Provide the secrets for the tailscale operator
+bootstrap_tailscale:
+  client_id: ""
+  client_secret: ""
