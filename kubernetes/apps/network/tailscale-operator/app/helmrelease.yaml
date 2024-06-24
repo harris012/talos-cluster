@@ -7,11 +7,11 @@ spec:
   interval: 30m
   chart:
     spec:
-      chart: tailscale
+      chart: tailscale-operator
       version: 1.68.1
       sourceRef:
         kind: HelmRepository
-        name: tailscale-operator
+        name: tailscale-charts
         namespace: flux-system
   install:
     remediation:
@@ -19,4 +19,13 @@ spec:
   upgrade:
     cleanupOnFail: true
     remediation:
+      strategy: rollback
       retries: 3
+  values:
+    installCRDs: true
+    operatorConfig:
+      image:
+        repository: ghcr.io/tailscale/k8s-operator
+    proxyConfig:
+      image:
+        repository: ghcr.io/tailscale/tailscale
