@@ -11,7 +11,7 @@ spec:
       version: 1.68.1
       sourceRef:
         kind: HelmRepository
-        name: tailscale-charts
+        name: tailscale-operator
         namespace: flux-system
   install:
     remediation:
