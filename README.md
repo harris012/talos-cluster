@@ -25,7 +25,7 @@ The features included will depend on the type of configuration you want to use. 
 
 ## 💻 Machine Preparation
 
-Hopefully some of this peeked your interests!  If you are marching forward, now is a good time to choose whether you will deploy a Kubernetes cluster with [k3s](https://github.com/k3s-io/k3s) or [Talos](https://github.com/siderolabs/talos).
+Hopefully some of this peeked your interests!  If you are marching forward, now is a good time to deploy a Kubernetes cluster with [Talos](https://github.com/siderolabs/talos).
 
 ### System requirements
 
