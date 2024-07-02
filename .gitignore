@@ -26,3 +26,6 @@ Brewfile.lock.json
 wiki
 # Bootstrap
 /config.yaml
+# custom patches
+/kubernetes/bootstrap/talos/patches/
+tailscale_extension.yaml

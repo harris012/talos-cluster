@@ -24,7 +24,7 @@ nodes:
   - hostname: "k8s"
     ipAddress: "192.168.0.156"
     installDisk: "/dev/nvme0n1"
-    talosImageURL: factory.talos.dev/installer/5b3717ebb1bc80ddea39bb8ae3cfd3294bfcfb13e05dcd6f1aa54b8e8f9dbcc1
+    talosImageURL: factory.talos.dev/installer/1f3b7c825b44aad40388ffebcfabf8c4f1a30d76a6722d49452aa4fec01ef03f
     controlPlane: true
     networkInterfaces:
       - deviceSelector:
@@ -41,7 +41,7 @@ nodes:
   - hostname: "k8s-w01"
     ipAddress: "192.168.0.155"
     installDisk: "/dev/nvme0n1"
-    talosImageURL: factory.talos.dev/installer/5b3717ebb1bc80ddea39bb8ae3cfd3294bfcfb13e05dcd6f1aa54b8e8f9dbcc1
+    talosImageURL: factory.talos.dev/installer/1f3b7c825b44aad40388ffebcfabf8c4f1a30d76a6722d49452aa4fec01ef03f
     controlPlane: false
     networkInterfaces:
       - deviceSelector:
@@ -63,6 +63,7 @@ patches:
   - "@./patches/global/kubelet.yaml"
   - "@./patches/global/openebs-local.yaml"
   - "@./patches/global/sysctl.yaml"
+  - "@./patches/global/tailscale-auth.yaml"
 
 # Controller patches
 controlPlane:

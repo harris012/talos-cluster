@@ -211,7 +211,11 @@ bootstrap_cloudflare:
 #   # Keep in mind that Cilium does not currently support IPv6 L2 announcements.
 #   dual_stack_ipv4_first: false
 
-# (Required )Provide the secrets for the tailscale operator
+## My custom changes to the template
+# (Required) Provide the secrets for the tailscale operator
 bootstrap_tailscale:
   client_id: ""
   client_secret: ""
+
+# (Required) tailscale token for auth in extension
+tailscale_auth_key: ""
