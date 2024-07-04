@@ -29,3 +29,4 @@ wiki
 # custom patches
 /kubernetes/bootstrap/talos/patches/
 tailscale_extension.yaml
+/kubernetes/bootstrap/talos/talconfig.yaml
