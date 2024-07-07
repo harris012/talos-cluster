@@ -38,6 +38,11 @@ nodes:
         mtu: 1500
         vip:
           ip: "192.168.0.163"
+    extensionServices:
+      - name: tailscale
+        configFiles:
+        environment:
+          - TS_AUTH_KEY=${TS_AUTH_KEY}
   - hostname: "k8s-w01"
     ipAddress: "192.168.0.155"
     installDisk: "/dev/nvme0n1"
@@ -53,6 +58,11 @@ nodes:
           - network: 0.0.0.0/0
             gateway: "192.168.0.1"
         mtu: 1500
+    extensionServices:
+      - name: tailscale
+        configFiles:
+        environment:
+          - TS_AUTH_KEY=${TS_AUTH_KEY}
 
 # Global patches
 patches:
@@ -63,7 +73,6 @@ patches:
   - "@./patches/global/kubelet.yaml"
   - "@./patches/global/openebs-local.yaml"
   - "@./patches/global/sysctl.yaml"
-  - "@./patches/global/tailscale.sops.yaml"
 
 # Controller patches
 controlPlane:

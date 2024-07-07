@@ -4,8 +4,6 @@ Thumbs.db
 # k8s
 kubeconfig
 talosconfig
-extensions.yaml
-tailscale.yaml
 .decrypted~*.yaml
 .config.env
 *.agekey
@@ -27,6 +25,4 @@ wiki
 # Bootstrap
 /config.yaml
 # custom patches
-/kubernetes/bootstrap/talos/patches/
-tailscale_extension.yaml
-/kubernetes/bootstrap/talos/talconfig.yaml
+extensions.yaml

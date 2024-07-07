@@ -217,5 +217,5 @@ bootstrap_tailscale:
   client_id: ""
   client_secret: ""
 
-# (Required) tailscale token for auth in extension
+# (Required) tailscale token for auth in talos extension
 tailscale_auth_key: ""

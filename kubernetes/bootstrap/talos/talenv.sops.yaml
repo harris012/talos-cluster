@@ -1,0 +1,21 @@
+TS_AUTH_KEY: ENC[AES256_GCM,data:D8bjdWs+Xd/FH2TyKkzdPhzHxz+D3xoHom5G8Pfy88MBV1Q+LcDeYly0sX9mJyyc8DbO8F5UAZRinm6J2w==,iv:2MXWChaz8jRWjmlb5HdfaRUOsprzMqpO/YMDVWAbzH8=,tag:YqAZ/MpieB0WSYAX4ADTGw==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ncpux28ex4506q4lus74rhgfcv0wzrfyuvp6m93smhzmx02acujs3h67jl
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBSckFXNXpVSy9tcWFweTR6
+            M2R4eGpKQ2ljNWJ0NVVpbVM0dk1rRGlNMWtnCnBhUXJDVGpkZUIvNUxtbWZnc1dk
+            QSs3YXJnM1Y0SHpQOXVUWnlFZU1pbXMKLS0tIFB1L25aRXhRTTlpcUlJcFJHMFZq
+            eEtmVkFyTUFkQ3BNQlgvWkNpNVgwU2cK2OS3CPdCYjfMC0t4dIvVY4PmluaW2ssm
+            7O4nTT4cnIu/Lw+qfv0IfriN4oZmNDgQpiDwR6BjMOGMSZyj4rKriQ==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2024-07-07T07:37:26Z"
+    mac: ENC[AES256_GCM,data:UjVsSAV+LpaXEz3SGekfMU/F50xHmQSZIX/FdivjWBlwPdmHmhco/fg6Ql3+YUaazYZRw7kBEzCSvAiWNZmcIfHmiCnnxB1SvE8KMofFc7oQ37MIckwJAzqLejTX9agumFU2Y/9XKkPmv/znECfT4E4MkReuoWwIu/VNa9Z6M4k=,iv:xRnYFcjCmWARq5usujiaLditJz3G0eup5BwOF6YVoNY=,tag:9kjjjVvlvniIkKiKSnShcA==,type:str]
+    pgp: []
+    encrypted_regex: ^(token|crt|key|id|secret|TS_AUTH_KEY|ca)$
+    version: 3.8.1
