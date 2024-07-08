@@ -1,2 +1,2 @@
-[x] Fix extension Secrets service
-[ ] Cloudnative PG implementation
+- [x] Fix extension Secrets service.
+- [ ] Cloudnative PG implementation.
