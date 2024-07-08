@@ -1,7 +1,7 @@
 
 <div align="center">
 
-<img src="https://github.com/harris012/talos-cluster/assets/logo.png" align="center" width="144px" height="144px"/>
+<img src="https://github.com/harris012/talos-cluster/blob/main/assets/logo.png" align="center" width="144px" height="144px"/>
 
 ### My _geeked_ homelab k8s cluster :wheel_of_dharma:
 
