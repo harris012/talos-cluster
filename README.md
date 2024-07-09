@@ -3,7 +3,7 @@
 
 <img src="https://github.com/harris012/talos-cluster/blob/main/assets/logo.png" align="center" width="144px" height="144px"/>
 
-### My _geeked_ homelab k8s cluster :wheel_of_dharma:
+### My homelab k8s cluster using Talos linux
 
 _... automated via [Flux](https://github.com/fluxcd/flux2), [Renovate](https://github.com/renovatebot/renovate) and [GitHub Actions](https://github.com/features/actions)_ :robot:
 
