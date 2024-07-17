@@ -24,9 +24,7 @@ nodes:
   - hostname: "k8s"
     ipAddress: "192.168.0.156"
     installDisk: "/dev/nvme0n1"
-    machineSpec:
-      secureboot: true
-    talosImageURL: factory.talos.dev/installer-secureboot/1f3b7c825b44aad40388ffebcfabf8c4f1a30d76a6722d49452aa4fec01ef03f
+    talosImageURL: factory.talos.dev/installer/1f3b7c825b44aad40388ffebcfabf8c4f1a30d76a6722d49452aa4fec01ef03f
     controlPlane: true
     networkInterfaces:
       - deviceSelector:
@@ -48,9 +46,7 @@ nodes:
   - hostname: "k8s-w01"
     ipAddress: "192.168.0.155"
     installDisk: "/dev/nvme0n1"
-    machineSpec:
-      secureboot: true
-    talosImageURL: factory.talos.dev/installer-secureboot/1f3b7c825b44aad40388ffebcfabf8c4f1a30d76a6722d49452aa4fec01ef03f
+    talosImageURL: factory.talos.dev/installer/1f3b7c825b44aad40388ffebcfabf8c4f1a30d76a6722d49452aa4fec01ef03f
     controlPlane: false
     networkInterfaces:
       - deviceSelector:
