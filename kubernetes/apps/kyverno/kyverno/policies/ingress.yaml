@@ -21,7 +21,7 @@ spec:
               kinds:
                 - Ingress
       context:
-        - name: INGRESS_CLASS_NAME
+        - name: kyverno
           variable:
             value: "{{ request.object.spec.ingressClassName }}"
             jmesPath: "to_string(@)"
@@ -29,4 +29,4 @@ spec:
         patchStrategicMerge:
           metadata:
             annotations:
-              external-dns.alpha.kubernetes.io/target: "{{ INGRESS_CLASS_NAME }}.${PUBLIC_DOMAIN}"
+              external-dns.alpha.kubernetes.io/target: "{{ kyverno }}.${SECRET_DOMAIN}"
