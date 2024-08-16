@@ -92,12 +92,14 @@ nodes:
     extensionServices:
       #% for es in item.extension_services %#
       - name: #{ es.name }#
+        #% if es.configFiles %#
         configFiles:
         #% for cf in es.configFiles %#
           - content: |-
               #{ cf.content | indent(14, yes) }#
             mountPath: #{ cf.mountPath }#
         #% endfor %#
+        #% endif %#
         #% if es.environment %#
         environment:
           #% for env in es.environment %#

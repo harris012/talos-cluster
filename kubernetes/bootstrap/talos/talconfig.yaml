@@ -40,7 +40,6 @@ nodes:
           ip: "192.168.0.163"
     extensionServices:
       - name: tailscale
-        configFiles:
         environment:
           - TS_AUTH_KEY=${TS_AUTH_KEY}
   - hostname: "k8s-w01"
@@ -60,7 +59,6 @@ nodes:
         mtu: 1500
     extensionServices:
       - name: tailscale
-        configFiles:
         environment:
           - TS_AUTH_KEY=${TS_AUTH_KEY}
 
