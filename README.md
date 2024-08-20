@@ -69,17 +69,16 @@ The features included will depend on the type of configuration you want to use. 
 
 Hopefully some of this peeked your interests!  If you are marching forward, now is a good time to deploy a Kubernetes cluster with [Talos](https://github.com/siderolabs/talos).
 
-### System requirements
+### Hardware
 
 > [!NOTE]
 > 1. The included behaviour of Talos is that all nodes are able to run workloads, **including** the controller nodes. **Worker nodes** are therefore **optional**.
 > 2. Do you have 3 or more nodes? It is highly recommended to make 3 of them controller nodes for a highly available control plane.
 
-| Role    | Cores    | Memory        | System Disk               |
-|---------|----------|---------------|---------------------------|
-| Control | 4 _(6*)_ | 8GB _(24GB*)_ | 100GB _(500GB*)_ SSD/NVMe |
-| Worker  | 4 _(6*)_ | 8GB _(24GB*)_ | 100GB _(500GB*)_ SSD/NVMe |
-| _\* recommended_ |
+| Device                                                                                 | Role     | Cores    | Memory  | System Disk  |
+|----------------------------------------------------------------------------------------|----------|----------|---------|--------------|
+|[Minisforum U820](https://www.minisforum.com/ueditor/file/20210315/1615805957804749.pdf)| Control  | 4        | 16GB    | 500GBNVMe    |
+|[GEEKOM Mini IT12](https://www.geekom.de/geekom-mini-it12-mini-pc/)                     | Worker   | 10       | 32GB    | 1TB NVMe     |
 
 ### Talos
 
