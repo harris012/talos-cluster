@@ -82,7 +82,7 @@ Hopefully some of this peeked your interests!  If you are marching forward, now 
 
 ### Talos
 
-1. Download the latest stable release of Talos from their [GitHub releases](https://github.com/siderolabs/talos/releases). You will want to grab either `metal-amd64.iso` or `metal-rpi_generic-arm64.raw.xz` depending on your system.
+1. Download the latest stable release of Talos from their [GitHub releases](https://github.com/siderolabs/talos/releases). You will want to grab `metal-amd64.iso`.
 
 2. Take note of the OS drive serial numbers you will need them later on.
 
