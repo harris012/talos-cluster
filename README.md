@@ -77,7 +77,7 @@ Hopefully some of this peeked your interests!  If you are marching forward, now 
 
 | Device                                                                                 | Role     | Cores    | Memory  | System Disk  |
 |----------------------------------------------------------------------------------------|----------|----------|---------|--------------|
-|[Minisforum U820](https://www.minisforum.com/ueditor/file/20210315/1615805957804749.pdf)| Control  | 4        | 16GB    | 500GBNVMe    |
+|[Minisforum U820](https://www.minisforum.com/ueditor/file/20210315/1615805957804749.pdf)| Control  | 4        | 16GB    | 500GB NVMe   |
 |[GEEKOM Mini IT12](https://www.geekom.de/geekom-mini-it12-mini-pc/)                     | Worker   | 10       | 32GB    | 1TB NVMe     |
 
 ### Talos
@@ -423,6 +423,3 @@ If this repo is too hot to handle or too cold to hold check out these following 
 - [techno-tim/k3s-ansible](https://github.com/techno-tim/k3s-ansible) - _The easiest way to bootstrap a self-hosted High Availability Kubernetes cluster. A fully automated HA k3s etcd install with kube-vip, MetalLB, and more_
 
 ## ⭐ Stargazers
-
-
-
