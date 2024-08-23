@@ -39,6 +39,9 @@ _... automated via [Flux](https://github.com/fluxcd/flux2), [Renovate](https://g
 
 ---
 
+# Aknoledgements
+
+Special thanks to [Devin Buhl](https://github.com/onedr0p) for providing the initial template for my amazing home lab Kubernetes cluster.
 
 # ⛵ Cluster Template
 
