@@ -1,2 +1,4 @@
 - [x] Fix extension Secrets service.
 - [ ] Cloudnative PG implementation.
+- [ ] Add support for nfs.
+- [ ] Add monitoring.
