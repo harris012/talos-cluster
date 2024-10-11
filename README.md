@@ -405,9 +405,9 @@ Resolving problems that you have could take some tweaking of your YAML manifests
 ```sh
 # Upgrade Talos to a newer version
 # NOTE: This needs to be run once on every node
-task talos:upgrade NODE=? IMAGE=?
+task talos:upgrade NODE=? VERSION=?
 # e.g.
-# task talos:upgrade NODE=192.168.42.10 IMAGE=factory.talos.dev/installer/${schematic_id}:v1.7.4
+# task talos:upgrade NODE=192.168.42.10 VERSION=v1.8.1
 ```
 
 ```sh
@@ -427,7 +427,7 @@ task talos:upgrade-k8s NODE=? VERSION=?
 
 The cluster is your oyster (or something like that). Below are some optional considerations you might want to review.
 
-#### Ship it
+### Ship it
 
 To browse or get ideas on applications people are running, community member [@whazor](https://github.com/whazor) created [Kubesearch](https://kubesearch.dev) as a creative way to search Flux HelmReleases across Github and Gitlab.
 
