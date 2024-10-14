@@ -1,4 +1,4 @@
-TS_AUTH_KEY: ENC[AES256_GCM,data:XoOSVkUiCVqeckHYbeVv5xuUmkCo5RK7eyjy8SYfe8xyK347dgtJOo3XQTkiwNwFwMg1RG+xi49gyU3ggvI=,iv:c8IwGmARdNSTHH8qx+n45R7xT0of1zv4/pIv2fwEcps=,tag:pC+f22jbfzPBEzKdE4Kb/g==,type:str]
+TS_AUTH_KEY: ENC[AES256_GCM,data:OVxrgkTIDQpJ9ZIMLCyhSNOplTiur3OcTvt7V3uqA8VrzckNBuwsECIt8WMAU6V/pBKlSsmskry8R+b2C7o=,iv:n7qsLkd8e5DXpECdkHclyfJ4ZpHFbQ6ij7yZhUcpwxw=,tag:GRzlLEfbTZPFkOABe+N7Ew==,type:str]
 sops:
     kms: []
     gcp_kms: []
@@ -8,14 +8,14 @@ sops:
         - recipient: age1ncpux28ex4506q4lus74rhgfcv0wzrfyuvp6m93smhzmx02acujs3h67jl
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBXOGZ3ZTV6TDFRQ2dzNTF4
-            aDlrUDBaWVdrVU1tTnRoaGE3V3c2WWdSaEdnCndXMVFHczhiNE1rTWxWb1lLdXJn
-            THp0ZnJGNjl4aGIrcnhLd0dwOHlHUHMKLS0tIFlzQjk2NFVKTjZlRWxvWVVxanJR
-            YXVFSzNUNnhkY0gydWZ3elQvWVBwZGsKYx0QxwMF8weQKe/XMzyPef1SjuU3OP8H
-            jKbEIoXqmehAzvKRBGQ9rxZVRvFWw0dSNJf709R2kfzJMmMEp16wOQ==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSA5VnArMUI1elh5M0RTMUFF
+            STFDOWI1cEpRc0VjVk5qdzVQTlBVT2t2VUZvCmdPQlJoek5FeFFodm0wNFFGWDFQ
+            eWF2RWozNHFnenR5TVBSNFpaMHpxa2cKLS0tIHYreEJzSC9XRVhvK1RLTk05MXBL
+            WFptSEVzVnhWNWhHZTJBU3BiWjJHNlEK0bkZPaS/r1XbfHMwp9MV5iYcfe9c3K1m
+            24TT7VmoVzwnBZZRMFGjaXcZQ4W6oU0GtlYBVsC1TqVyBfPTPllBUg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2024-09-29T20:26:27Z"
-    mac: ENC[AES256_GCM,data:gNzMCUXI8GTnDrw8ePpjeJ/QD8pd0hst9g/nHJ2L2Q6M40kVUPYAEDGRwn5yuKBVPy4rFA7MdH5XDSXMwTrHz2PtqGcgJRiKDsarglKRfyrVn49YcC4HygCmvZbZJdGOIclFuFXr6tT2cvdpRtjEVFVCx4j081yK9q1Hzv5qNEQ=,iv:tdTKO/uPxb8xnIhGnxJuPB/k7H3R8piPjaxAzvK4UFo=,tag:+fwpwQ21WzKfO6SuohiUcg==,type:str]
+    lastmodified: "2024-10-14T17:10:17Z"
+    mac: ENC[AES256_GCM,data:PFBN2f1qMpKE+l3I150+TE9252JwcCRXCw8riFYQJM9o4DuRc8Fq1uJRC9b3FcT6G2zDar2llPPRJRdSsjA63oK4Rvn++ZU48I2BY76ZAb602G6TE06iMIQnpYNJyA8aR/IAtJllgi522fSRIeTS+2SHc404kz1SoAM8Y2mk7v8=,iv:oCQjvFF5JjUnA2ZLMvnOPdWZ+nWrQ9IzuAelNsOuvYI=,tag:x9xxQmhPBnC5R5GmTK2zmQ==,type:str]
     pgp: []
-    encrypted_regex: ^(token|crt|key|id|secret|TS_AUTH_KEY|ca)$
-    version: 3.8.1
+    unencrypted_suffix: _unencrypted
+    version: 3.9.0

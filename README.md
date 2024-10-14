@@ -122,38 +122,30 @@ You have two different options for setting up your local workstation.
 
 #### Non-devcontainer method
 
-1. Install the most recent version of [task](https://taskfile.dev/), see the [installation docs](https://taskfile.dev/installation/) for other supported platforms.
+1. Install the most recent version of [task](https://taskfile.dev/) and [direnv](https://direnv.net/)
 
     ```sh
     # Homebrew
-    brew install go-task
+    brew install direnv go-task
     # or, Arch
-    pacman -S --noconfirm go-task && ln -sf /usr/bin/go-task /usr/local/bin/task
+    pacman -S --noconfirm direnv go-task && ln -sf /usr/bin/go-task /usr/local/bin/task
     ```
 
-2. Install the most recent version of [direnv](https://direnv.net/), see the [installation docs](https://direnv.net/docs/installation.html) for other supported platforms.
-
-    ```sh
-    # Homebrew
-    brew install direnv
-    # or, Arch
-    pacman -S --noconfirm direnv
-    ```
-
-3. [Hook `direnv` into your preferred shell](https://direnv.net/docs/hook.html), then run:
+2. [Hook `direnv` into your preferred shell](https://direnv.net/docs/hook.html), then run:
 
     ```sh
     task workstation:direnv
     ```
 
     📍 _**Verify** that `direnv` is setup properly by opening a new terminal and `cd`ing into your repository. You should see something like:_
+
     ```sh
     cd /path/to/repo
-    direnv: loading /path/to/repo/.envrc
-    direnv: export +ANSIBLE_COLLECTIONS_PATH ...  +VIRTUAL_ENV ~PATH
+    direnv: loading ... .envrc
+    direnv: export +VIRTUAL_ENV ... ~PATH
     ```
 
-6. Install the additional **required** CLI tools
+3. Install the additional **required** CLI tools
 
    📍 _**Not using Homebrew or ArchLinux?** Try using the generic Linux task below, if that fails check out the [Brewfile](.taskfiles/Workstation/Brewfile)/[Archfile](.taskfiles/Workstation/Archfile) for what CLI tools needed and install them._
 
@@ -166,7 +158,7 @@ You have two different options for setting up your local workstation.
     task workstation:generic-linux
     ```
 
-7. Setup a Python virual environment by running the following task command.
+4. Setup a Python virual environment by running the following task command.
 
     📍 _This commands requires Python 3.11+ to be installed._
 
@@ -174,7 +166,7 @@ You have two different options for setting up your local workstation.
     task workstation:venv
     ```
 
-8. Continue on to 🔧 [**Stage 3**](#-stage-3-bootstrap-configuration)
+5. Continue on to 🔧 [**Stage 3**](#-stage-3-bootstrap-configuration)
 
 ### 🔧 Stage 3: Bootstrap configuration
 
