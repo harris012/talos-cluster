@@ -2,3 +2,6 @@
 - [ ] Cloudnative PG implementation.
 - [ ] Add support for nfs by using CSI driver.
 - [ ] Add monitoring.
+
+- [ ] Setup Nextcloud.
+
