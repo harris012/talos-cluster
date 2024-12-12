@@ -7,13 +7,15 @@ kubernetesVersion: v1.31.3
 
 clusterName: "k8s"
 endpoint: https://192.168.0.163:6443
+
 clusterPodNets:
   - "10.69.0.0/16"
 clusterSvcNets:
   - "10.96.0.0/16"
+
 additionalApiServerCertSans: &sans
   - "192.168.0.163"
-  - 127.0.0.1 # KubePrism
+  - "127.0.0.1"
 additionalMachineCertSans: *sans
 
 # Disable built-in Flannel to use Cilium
@@ -34,7 +36,7 @@ nodes:
           - "192.168.0.156/24"
         routes:
           - network: 0.0.0.0/0
-            gateway: "192.168.0.1"
+            gateway: "192.168.0.100"
         mtu: 1500
         vip:
           ip: "192.168.0.163"
@@ -56,7 +58,7 @@ nodes:
           - "192.168.0.155/24"
         routes:
           - network: 0.0.0.0/0
-            gateway: "192.168.0.1"
+            gateway: "192.168.0.100"
         mtu: 1500
     extensionServices:
       - name: tailscale

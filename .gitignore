@@ -26,3 +26,4 @@ wiki
 /config.yaml
 # custom patches
 extensions.yaml
+old_*
