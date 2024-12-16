@@ -3,7 +3,7 @@
 
 <img src="https://github.com/harris012/talos-cluster/blob/main/assets/logo.png" align="center" width="144px" height="144px"/>
 
-### My homelab bare metal k8s cluster using Talos linux
+### <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f680/512.gif" alt="🚀" width="16" height="16"> My homelab bare metal k8s cluster using Talos linux <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f6a7/512.gif" alt="🚧" width="16" height="16">
 
 _... automated via [Flux](https://github.com/fluxcd/flux2), [Renovate](https://github.com/renovatebot/renovate) and [GitHub Actions](https://github.com/features/actions)_ :robot:
 
