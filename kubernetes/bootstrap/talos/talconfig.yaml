@@ -3,7 +3,7 @@
 # renovate: datasource=docker depName=ghcr.io/siderolabs/installer
 talosVersion: v1.8.3
 # renovate: datasource=docker depName=ghcr.io/siderolabs/kubelet
-kubernetesVersion: v1.32.0
+kubernetesVersion: v1.31.3
 
 clusterName: "k8s"
 endpoint: https://192.168.0.163:6443
@@ -36,7 +36,7 @@ nodes:
           - "192.168.0.156/24"
         routes:
           - network: 0.0.0.0/0
-            gateway: "192.168.0.100"
+            gateway: "192.168.0.1"
         mtu: 1500
         vip:
           ip: "192.168.0.163"
@@ -58,7 +58,7 @@ nodes:
           - "192.168.0.155/24"
         routes:
           - network: 0.0.0.0/0
-            gateway: "192.168.0.100"
+            gateway: "192.168.0.1"
         mtu: 1500
     extensionServices:
       - name: tailscale
