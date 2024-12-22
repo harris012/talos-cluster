@@ -83,11 +83,9 @@ The features included will depend on the type of configuration you want to use. 
 |[Minisforum U820](https://www.minisforum.com/ueditor/file/20210315/1615805957804749.pdf)| Control  | 4        | 16GB    | 500GB NVMe   |
 |[GEEKOM Mini IT12](https://www.geekom.de/geekom-mini-it12-mini-pc/)                     | Worker   | 10       | 32GB    | 1TB NVMe     |
 
-### Talos
+1. Head over to the [Talos Linux Image Factory](https://factory.talos.dev) and follow the instructions. Be sure to only choose the **bare-minimum system extensions** as some might require additional configuration and prevent Talos from booting without it. You can always add system extensions after Talos is installed and working.
 
-1. Download the latest stable release of Talos from their [GitHub releases](https://github.com/siderolabs/talos/releases). You will want to grab `metal-amd64.iso`.
-
-2. Take note of the OS drive serial numbers you will need them later on.
+2. This will eventually lead you to download a Talos Linux iso file (or for SBCs the `.raw.xz`). Make sure to note the schematic ID you will need this later on.
 
 3. Flash the iso or raw file to a USB drive and boot to Talos on your nodes with it.
 
