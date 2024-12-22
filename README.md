@@ -72,8 +72,6 @@ The features included will depend on the type of configuration you want to use. 
 
 ## 💻 Machine Preparation
 
-Hopefully some of this peeked your interests!  If you are marching forward, now is a good time to deploy a Kubernetes cluster with [Talos](https://github.com/siderolabs/talos).
-
 ### Hardware
 
 > [!NOTE]
