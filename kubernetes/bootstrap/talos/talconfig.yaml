@@ -3,7 +3,7 @@
 # renovate: datasource=docker depName=ghcr.io/siderolabs/installer
 talosVersion: v1.9.0
 # renovate: datasource=docker depName=ghcr.io/siderolabs/kubelet
-kubernetesVersion: v1.31.3
+kubernetesVersion: v1.32.0
 
 clusterName: "k8s"
 endpoint: https://192.168.0.163:6443
@@ -81,7 +81,6 @@ patches:
 # Controller patches
 controlPlane:
   patches:
-    - "@./patches/controller/api-access.yaml"
     - "@./patches/controller/cluster.yaml"
     - "@./patches/controller/disable-admission-controller.yaml"
     - "@./patches/controller/etcd.yaml"
