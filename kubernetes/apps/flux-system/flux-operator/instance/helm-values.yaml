@@ -10,5 +10,5 @@ instance:
   sync:
     kind: GitRepository
     url: "https://github.com/harris012/talos-cluster.git"
-    ref: refs/heads/main
+    ref: "refs/heads/main"
     path: kubernetes/flux/cluster
