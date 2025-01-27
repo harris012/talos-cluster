@@ -38,7 +38,7 @@ nodes:
           - "192.168.0.156/24"
         routes:
           - network: "0.0.0.0/0"
-            gateway: "192.168.0.1"
+            gateway: "192.168.0.100"
         mtu: 1500
         vip:
           ip: "192.168.0.163"
@@ -57,7 +57,7 @@ nodes:
           - "192.168.0.155/24"
         routes:
           - network: "0.0.0.0/0"
-            gateway: "192.168.0.1"
+            gateway: "192.168.0.100"
         mtu: 1500
 
 # Global patches
