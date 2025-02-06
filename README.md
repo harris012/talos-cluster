@@ -56,7 +56,7 @@ The features included will depend on the type of configuration you want to use. 
 1. **"Flux cluster"** - a Kubernetes cluster deployed on-top of [Talos Linux](https://github.com/siderolabs/talos) with an opinionated implementation of [Flux](https://github.com/fluxcd/flux2) using [GitHub](https://github.com/) as the Git provider and [sops](https://github.com/getsops/sops) to manage secrets.
 
     - **Required:** Some knowledge of [Containers](https://opencontainers.org/), [YAML](https://yaml.org/), and [Git](https://git-scm.com/).
-    - **Components:** [flux](https://github.com/fluxcd/flux2), [cilium](https://github.com/cilium/cilium), [cert-manager](https://github.com/cert-manager/cert-manager), [spegel](https://github.com/spegel-org/spegel), [reloader](https://github.com/stakater/Reloader), and [openebs](https://github.com/openebs/openebs).
+    - **Components:** [flux](https://github.com/fluxcd/flux2), [cilium](https://github.com/cilium/cilium), [cert-manager](https://github.com/cert-manager/cert-manager), [spegel](https://github.com/spegel-org/spegel), and [reloader](https://github.com/stakater/Reloader).
 
 2. **"Flux cluster with Cloudflare"** - An addition to "**Flux cluster**" that provides DNS and SSL with [Cloudflare](https://www.cloudflare.com/). [Cloudflare Tunnel](https://www.cloudflare.com/products/tunnel/) is also included to provide external access to certain applications deployed in your cluster.
 
@@ -251,7 +251,7 @@ task talos:apply-node IP=? MODE=?
 ```sh
 # Upgrade node to a newer Talos version
 task talos:upgrade-node IP=?
-# e.g. task talos:upgrade IP=10.10.10.10
+# e.g. task talos:upgrade-node IP=10.10.10.10
 ```
 
 ```sh
@@ -270,47 +270,57 @@ The base Renovate configuration in your repository can be viewed at [.github/ren
 
 ## 🐛 Debugging
 
-Below is a general guide on trying to debug an issue with an resource or application. For example, if a workload/resource is not showing up or a pod has started but in a `CrashLoopBackOff` or `Pending` state.
+Below is a general guide on trying to debug an issue with an resource or application. For example, if a workload/resource is not showing up or a pod has started but in a `CrashLoopBackOff` or `Pending` state. Most of these steps do not include a way to fix the problem as the problem could be one of many different things.
 
-1. Start by checking all Flux Kustomizations & Git Repository & OCI Repository and verify they are healthy.
+1. Verify the Git Repository is up-to-date and in a ready state.
 
     ```sh
-    flux get sources oci -A
     flux get sources git -A
+    ```
+
+    Force Flux to sync your repository to your cluster:
+
+    ```sh
+    flux -n flux-system reconcile ks flux-system --with-source
+    ```
+
+2. Verify all the Flux kustomizations are up-to-date and in a ready state.
+
+    ```sh
     flux get ks -A
     ```
 
-2. Then check all the Flux Helm Releases and verify they are healthy.
+3. Verify all the Flux helm releases are up-to-date and in a ready state.
 
     ```sh
     flux get hr -A
     ```
 
-3. Then check the if the pod is present.
+4. Do you see the pod of the workload you are debugging?
 
     ```sh
     kubectl -n <namespace> get pods -o wide
     ```
 
-4. Then check the logs of the pod if its there.
+5. Check the logs of the pod if its there.
 
     ```sh
     kubectl -n <namespace> logs <pod-name> -f
     ```
 
-5. If a resource exists try to describe it to see what problems it might have.
+6. If a resource exists try to describe it to see what problems it might have.
 
     ```sh
     kubectl -n <namespace> describe <resource> <name>
     ```
 
-6. Check the namespace events
+7. Check the namespace events
 
     ```sh
     kubectl -n <namespace> get events --sort-by='.metadata.creationTimestamp'
     ```
 
-Resolving problems that you have could take some tweaking of your YAML manifests in order to get things working, other times it could be a external factor like permissions on NFS. If you are unable to figure out your problem see the help section below.
+Resolving problems that you have could take some tweaking of your YAML manifests in order to get things working, other times it could be a external factor like permissions on a NFS server.
 
 ## 🧹 Tidy up
 
@@ -341,8 +351,8 @@ Instead of using [k8s_gateway](https://github.com/ori-edge/k8s_gateway) to provi
 
 ### Storage
 
-The included CSI (openebs in local-hostpath mode) is a great start for storage but soon you might find you need more features like replicated block storage, or to connect to a NFS/SMB/iSCSI server. If you need any of those features be sure to check out the projects like [rook-ceph](https://github.com/rook/rook), [longhorn](https://github.com/longhorn/longhorn), [openebs](https://github.com/openebs/openebs), [democratic-csi](https://github.com/democratic-csi/democratic-csi), [csi-driver-nfs](https://github.com/kubernetes-csi/csi-driver-nfs),
-and [synology-csi](https://github.com/SynologyOpenSource/synology-csi).
+You might find you need persistent storage for your workloads with features like replicated storage or to connect to a NFS/SMB/iSCSI server. If you need any of those features be sure to check out the projects like [rook-ceph](https://github.com/rook/rook), [longhorn](https://github.com/longhorn/longhorn), [openebs](https://github.com/openebs/openebs), [democratic-csi](https://github.com/democratic-csi/democratic-csi), [csi-driver-nfs](https://github.com/kubernetes-csi/csi-driver-nfs), [csi-driver-smb](https://github.com/kubernetes-csi/csi-driver-smb)
+or [synology-csi](https://github.com/SynologyOpenSource/synology-csi).
 
 ### Community Repositories
 
