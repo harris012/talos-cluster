@@ -4,4 +4,5 @@
 - [ ] Add monitoring.
 
 - [ ] Setup Nextcloud.
+- [ ] Setup Redis.
 
