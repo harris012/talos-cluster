@@ -21,6 +21,7 @@ Brewfile.lock.json
 .idea
 # Bootstrap
 /config.yaml
-# custom patches
+# my custom patches
 extensions.yaml
 old_*
+cloudflared.json
