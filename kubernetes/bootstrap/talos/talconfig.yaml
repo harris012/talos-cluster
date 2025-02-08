@@ -9,9 +9,9 @@ clusterName: kubernetes
 endpoint: https://192.168.0.163:6443
 
 clusterPodNets:
-  - "192.168.0.100/16"
+  - "10.69.0.0/16"
 clusterSvcNets:
-  - "192.168.0.100/16"
+  - "10.69.0.0/16"
 
 additionalApiServerCertSans: &sans
   - "192.168.0.163"
