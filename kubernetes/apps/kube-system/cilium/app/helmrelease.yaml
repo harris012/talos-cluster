@@ -19,14 +19,14 @@ spec:
   chart:
     spec:
       chart: cilium
-      version: 1.17.2
+      version: 1.17.3
       sourceRef:
         kind: HelmRepository
         name: cilium
         namespace: kube-system
   install:
     remediation:
-      retries: 3
+      retries: -1
   upgrade:
     cleanupOnFail: true
     remediation:
