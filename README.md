@@ -1,7 +1,7 @@
 
 <div align="center">
 
-<img src="https://github.com/harris012/talos-cluster/blob/main/assets/logo.png" align="center" width="144px" height="144px"/>
+<!-- <img src="https://github.com/harris012/talos-cluster/blob/main/assets/logo.png" align="center" width="144px" height="144px"/> -->
 
 ### <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f680/512.gif" alt="🚀" width="16" height="16"> My homelab bare metal k8s cluster using Talos linux <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f6a7/512.gif" alt="🚧" width="16" height="16">
 
@@ -11,8 +11,9 @@ _... automated via [Flux](https://github.com/fluxcd/flux2), [Renovate](https://g
 
 <div align="center">
 
-[![Talos](https://img.shields.io/endpoint?url=https%3A%2F%2Fkromgo.ktwo.io%2Fquery%3Fformat%3Dendpoint%26metric%3Dtalos_version&style=for-the-badge&logo=talos&logoColor=white&color=blue&label=%20)](https://talos.dev)&nbsp;&nbsp;
-[![Kubernetes](https://img.shields.io/endpoint?url=https%3A%2F%2Fkromgo.ktwo.io%2Fquery%3Fformat%3Dendpoint%26metric%3Dkubernetes_version&style=for-the-badge&logo=kubernetes&logoColor=white&color=blue&label=%20)](https://kubernetes.io)&nbsp;&nbsp;
+[![Talos](https://img.shields.io/endpoint?url=https%3A%2F%2Fkromgo.devbu.io%2Ftalos_version&style=for-the-badge&logo=talos&logoColor=white&color=blue&label=%20)](https://talos.dev)&nbsp;&nbsp;
+[![Kubernetes](https://img.shields.io/endpoint?url=https%3A%2F%2Fkromgo.devbu.io%2Fkubernetes_version&style=for-the-badge&logo=kubernetes&logoColor=white&color=blue&label=%20)](https://kubernetes.io)&nbsp;&nbsp;
+[Flux](https://img.shields.io/endpoint?url=https%3A%2F%2Fkromgo.devbu.io%2Fflux_version&style=for-the-badge&logo=flux&logoColor=white&color=blue&label=%20)](https://fluxcd.io)&nbsp;&nbsp;
 <!-- [![Renovate](https://img.shields.io/github/actions/workflow/status/harris012/talos-cluster/renovate.yaml?branch=master&label=&logo=renovatebot&style=for-the-badge&color=blue)](https://github.com/harris012/talos-cluster/actions/workflows/renovate.yaml) -->
 
 </div>
