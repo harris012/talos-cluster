@@ -5,4 +5,4 @@
 
 - [ ] Setup Nextcloud.
 - [ ] Setup Redis.
-
+- [ ] Setup External Secrets Operator with VW.
