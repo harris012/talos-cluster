@@ -461,5 +461,5 @@ If this repo is too hot to handle or too cold to hold check out these following 
 
 ## My custom changes to the repo
 
-- External secrets operator
+- Openebs Installation
 
