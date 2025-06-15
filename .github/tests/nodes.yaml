@@ -4,13 +4,13 @@ nodes:
     controller: true
     disk: /dev/sdfake
     mac_addr: 00:00:00:00:00:00
-    schematic_id: "376567988ad370138ad8b2698212367b8edcb69b5fd68c80be1f2ec7d603b4ba"
+    schematic_id: "4577aa51b259ad4719a2005c9ec4a74e1e40b04ccdd351a1b624562e51d4ff9e"
   - name: k8s-1
     address: 10.10.10.101
     controller: false
     disk: /dev/sdfake
     mac_addr: 00:00:00:00:00:01
-    schematic_id: "376567988ad370138ad8b2698212367b8edcb69b5fd68c80be1f2ec7d603b4ba"
+    schematic_id: "4577aa51b259ad4719a2005c9ec4a74e1e40b04ccdd351a1b624562e51d4ff9e"
     mtu: 1500
     secureboot: true
     encrypt_disk: true
