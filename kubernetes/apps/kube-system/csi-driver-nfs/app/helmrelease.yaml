@@ -37,7 +37,7 @@ spec:
       create: true
       name: nfs-slow
       parameters:
-        server: 192.168.0.158
+        server: expanse.internal
         share: /mnt/storage/k8s
       mountOptions:
         - nfsvers=4.2
