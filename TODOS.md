@@ -7,4 +7,4 @@
 - [ ] Setup Redis.
 - [ ] Setup External Secrets Operator with VW.
 - [ ] Test Kubevirt with GPU acceleration.
-- [ ] Install taliscale Operator.
+- [x] Install taliscale Operator.
