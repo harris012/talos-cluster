@@ -1,82 +1,67 @@
 ---
-apiVersion: kubevirt.io/v1
-kind: VirtualMachine
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
 metadata:
-  name: fedora-vm
+  name: &name kubevirt-testvm
   namespace: kubevirt
 spec:
-  running: false
-  template:
-    metadata:
-      labels:
-        kubevirt.io/vm: fedora-vm
-      annotations:
-        kubevirt.io/allow-pod-bridge-network-live-migration: "true"
-
+  interval: 30m
+  chart:
     spec:
-      evictionStrategy: LiveMigrate
-      domain:
-        cpu:
-          cores: 2
-        resources:
-          requests:
-            memory: 4G
-        devices:
-          disks:
-            - name: fedora-vm-pvc
-              disk:
-                bus: virtio
-            - name: cloudinitdisk
-              disk:
-                bus: virtio
-          interfaces:
-          - name: podnet
-            masquerade: {}
-      networks:
-        - name: podnet
-          pod: {}
-      volumes:
-        - name: fedora-vm-pvc
-          persistentVolumeClaim:
-            claimName: fedora-vm-pvc
-        - name: cloudinitdisk
-          cloudInitNoCloud:
-            networkData: |
-              network:
-                version: 1
-                config:
-                  - type: physical
-                    name: eth0
-                    subnets:
-                      - type: dhcp
-            userData: |-
-              #cloud-config
-              users:
-                - name: fedora
-                  ssh_authorized_keys:
-                    - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINqmAKyEwap7A/VjPNd8P2tayN3QOh8aylJ36273IAGx proton@proton
-                  sudo: ['ALL=(ALL) NOPASSWD:ALL']
-                  groups: sudo
-                  shell: /bin/bash
-              runcmd:
-                - "sudo touch /root/installed"
-                - "sudo dnf update"
-                - "sudo dnf install httpd fastfetch -y"
-                - "sudo systemctl daemon-reload"
-                - "sudo systemctl enable httpd"
-                - "sudo systemctl start --no-block httpd"
-
-  dataVolumeTemplates:
-  - metadata:
-      name: fedora-vm-pvc
-    spec:
-      storage:
-        resources:
-          requests:
-            storage: 35Gi
-        accessModes:
-          - ReadWriteMany
-        storageClassName: "openebs-hostpath"
-      source:
-        http:
-          url: "https://fedora.mirror.wearetriple.com/linux/releases/40/Cloud/x86_64/images/Fedora-Cloud-Base-Generic.x86_64-40-1.14.qcow2"
+      chart: raw
+      version: v0.3.2
+      sourceRef:
+        kind: HelmRepository
+        namespace: kubevirt
+      interval: 30m
+  targetNamespace: &namespace kubevirt
+  install:
+    createNamespace: true
+    remediation:
+      retries: 10
+  upgrade:
+    remediation:
+      retries: 10
+  dependsOn:
+    - name: kubevirt
+      namespace: kubevirt
+  values:
+    resources:
+      - apiVersion: kubevirt.io/v1
+        kind: VirtualMachine
+        metadata:
+          name: testvm
+          namespace: kubevirt
+        spec:
+          runStrategy: Halted
+          template:
+            metadata:
+              labels:
+                kubevirt.io/size: small
+                kubevirt.io/domain: testvm
+            spec:
+              domain:
+                devices:
+                  disks:
+                    - name: containerdisk
+                      disk:
+                        bus: virtio
+                    - name: cloudinitdisk
+                      disk:
+                        bus: virtio
+                  interfaces:
+                  - name: default
+                    masquerade: {}
+                resources:
+                  requests:
+                    memory: 64M
+              networks:
+              - name: default
+                pod: {}
+              volumes:
+                - name: containerdisk
+                  containerDisk:
+                    image: quay.io/kubevirt/cirros-container-disk-demo
+                - name: cloudinitdisk
+                  cloudInitNoCloud:
+                    userDataBase64: SGkuXG4=

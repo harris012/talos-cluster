@@ -27,25 +27,6 @@ spec:
       retries: 3
   values:
     resources:
-      # - apiVersion: cdi.kubevirt.io/v1beta1
-      #   kind: CDI
-      #   metadata:
-      #     name: cdi
-      #     namespace: cdi
-      #   spec:
-      #     config:
-      #       featureGates:
-      #       - HonorWaitForFirstConsumer
-      #     imagePullPolicy: IfNotPresent
-      #     infra:
-      #       nodeSelector:
-      #         kubernetes.io/os: linux
-      #       tolerations:
-      #       - key: CriticalAddonsOnly
-      #         operator: Exists
-      #     workload:
-      #       nodeSelector:
-      #         kubernetes.io/os: linux
       - apiVersion: cdi.kubevirt.io/v1beta1
         kind: CDI
         metadata:
@@ -53,11 +34,30 @@ spec:
           namespace: cdi
         spec:
           config:
-            scratchSpaceStorageClass: openebs-hostpath
-            podResourceRequirements:
-              requests:
-                cpu: "100m"
-                memory: "60M"
-              limits:
-                cpu: "750m"
-                memory: "2Gi"
+            featureGates:
+            - HonorWaitForFirstConsumer
+          imagePullPolicy: IfNotPresent
+          infra:
+            nodeSelector:
+              kubernetes.io/os: linux
+            tolerations:
+            - key: CriticalAddonsOnly
+              operator: Exists
+          workload:
+            nodeSelector:
+              kubernetes.io/os: linux
+      # - apiVersion: cdi.kubevirt.io/v1beta1
+      #   kind: CDI
+      #   metadata:
+      #     name: cdi
+      #     namespace: cdi
+      #   spec:
+      #     config:
+      #       scratchSpaceStorageClass: openebs-hostpath
+      #       podResourceRequirements:
+      #         requests:
+      #           cpu: "100m"
+      #           memory: "60M"
+      #         limits:
+      #           cpu: "750m"
+      #           memory: "2Gi"
