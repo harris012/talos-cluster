@@ -5,3 +5,4 @@ kind: Kustomization
 resources:
   - ./kubevirt-operator.yaml
   - ./helmrelease.yaml
+  - ./vm.yaml
