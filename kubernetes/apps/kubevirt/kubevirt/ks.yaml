@@ -4,27 +4,23 @@ apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
   name: &app kubevirt
-  namespace: &namespace default
+  namespace: &namespace kubevirt
 spec:
   commonMetadata:
     labels:
       app.kubernetes.io/name: *app
-  decryption:
-    provider: sops
-    secretRef:
-      name: sops-age
-  interval: 30m
-  path: ./kubernetes/apps/default/kubevirt/app
-  postBuild:
-  substituteFrom:
-    - name: cluster-secrets
-      kind: Secret
+  healthChecks:
+    - apiVersion: helm.toolkit.fluxcd.io/v2
+      kind: HelmRelease
+      name: *app
+      namespace: *namespace
+  interval: 1h
+  path: ./kubernetes/apps/kubevirt/kubevirt/app
   prune: true
-  retryInterval: 1m
+  retryInterval: 2m
   sourceRef:
     kind: GitRepository
     name: flux-system
     namespace: flux-system
   targetNamespace: *namespace
-  wait: true
   timeout: 5m
