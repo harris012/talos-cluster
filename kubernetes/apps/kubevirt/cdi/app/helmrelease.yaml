@@ -53,7 +53,7 @@ spec:
           namespace: cdi
         spec:
           config:
-            scratchSpaceStorageClass: local-path
+            scratchSpaceStorageClass: openebs-hostpath
             podResourceRequirements:
               requests:
                 cpu: "100m"
