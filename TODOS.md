@@ -9,4 +9,4 @@
 - [ ] Test Kubevirt with GPU acceleration.
 - [x] Install taliscale Operator.
 - [ ] setup ingress with domain.
-
+- [ ] setup gatus.
