@@ -56,7 +56,7 @@ spec:
             enabled: true
       mon:
         allowMultiplePerNode: true
-        count: 2
+        count: 3
       network:
         provider: host
         connections:
