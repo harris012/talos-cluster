@@ -51,6 +51,7 @@ spec:
         ssl: false
         # prometheusEndpoint: http://prometheus-operated.observability.svc.cluster.local:9090
       mgr:
+        count: 1
         modules:
           - name: pg_autoscaler
             enabled: true
