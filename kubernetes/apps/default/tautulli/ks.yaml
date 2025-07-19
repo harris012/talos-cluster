@@ -13,11 +13,11 @@ spec:
   #   - ../../../../components/gatus/guarded
   #   - ../../../../components/keda/nfs-scaler
   #   - ../../../../components/volsync
-  # dependsOn:
+  dependsOn:
   #   - name: keda
   #     namespace: observability
-  #   - name: rook-ceph-cluster
-  #     namespace: rook-ceph
+    - name: rook-ceph-cluster
+      namespace: rook-ceph
   interval: 1h
   path: ./kubernetes/apps/default/tautulli/app
   # postBuild:
