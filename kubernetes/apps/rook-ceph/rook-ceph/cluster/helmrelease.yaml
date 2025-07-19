@@ -41,6 +41,7 @@ spec:
       cephConfig:
         global:
           osd_pool_default_size: "1" # for single node cluster
+          mon_warn_on_pool_no_redundancy: "false" # supress warning for single node cluster
           bdev_enable_discard: "true" # quote
           bdev_async_discard_threads: "1" # quote
           osd_class_update_on_start: "false" # quote
