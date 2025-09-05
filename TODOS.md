@@ -1,12 +1,15 @@
+- [ ] setup internal routes.
+
+
+
 - [x] Fix extension Secrets service.
-- [ ] Cloudnative PG implementation.
+- [-] Cloudnative PG implementation.
 - [x] Add support for nfs by using CSI driver.
 - [ ] Add monitoring.
 
-- [ ] Setup Nextcloud (inside kubevirt VM).
-- [ ] Setup Redis.
+- [ ] Setup Nextcloud.
+- [-] Setup Redis.
 - [ ] Setup External Secrets Operator with VW.
-- [ ] Test Kubevirt with GPU acceleration.
+- [-] Test Kubevirt with GPU acceleration.
 - [x] Install taliscale Operator.
-- [ ] setup ingress with domain.
 - [ ] setup gatus.
