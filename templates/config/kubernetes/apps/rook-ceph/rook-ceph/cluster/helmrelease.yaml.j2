@@ -26,7 +26,7 @@ spec:
     route:
       dashboard:
         host:
-          name: rook.k8s.harissaeed.com
+          name: ["rook.${SECRET_DOMAIN}"]
           path: /
           pathType: PathPrefix
         parentRefs:
@@ -50,7 +50,7 @@ spec:
           enabled: true
       dashboard:
         enabled: true
-        urlPrefix: /
+        urlPrefix: ["rook.${SECRET_DOMAIN}"]
         ssl: false
         # prometheusEndpoint: http://prometheus-operated.observability.svc.cluster.local:9090
       mgr:
