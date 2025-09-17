@@ -50,7 +50,7 @@ spec:
           enabled: true
       dashboard:
         enabled: true
-        urlPrefix: rook.k8s.harissaeed.com
+        urlPrefix: /
         ssl: false
         # prometheusEndpoint: http://prometheus-operated.observability.svc.cluster.local:9090
       mgr:
