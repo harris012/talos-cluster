@@ -23,7 +23,7 @@ spec:
         main:
           enabled: true
           hostnames:
-            - alertmanagerk8s.harissaeed.com
+            - alertmanager.harissaeed.com
           parentRefs:
             - name: internal
               namespace: kube-system
@@ -33,7 +33,7 @@ spec:
           name: alertmanager
           global:
             resolveTimeout: 5m
-        externalUrl: https://alertmanagerk8s.harissaeed.com
+        externalUrl: https://alertmanager.harissaeed.com
         storage:
           volumeClaimTemplate:
             spec:
@@ -52,7 +52,7 @@ spec:
         main:
           enabled: true
           hostnames:
-            - prometheusk8s.harissaeed.com
+            - prometheus.harissaeed.com
           parentRefs:
             - name: internal
               namespace: kube-system
