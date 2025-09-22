@@ -24,7 +24,7 @@ nodes:
     installDisk: "/dev/nvme0n1"
     machineSpec:
       secureboot: false
-    talosImageURL: factory.talos.dev/installer/376567988ad370138ad8b2698212367b8edcb69b5fd68c80be1f2ec7d603b4ba
+    talosImageURL: factory.talos.dev/installer/9c5c9cb371a1e2e3d5633b1e813c221535a19664434126415d0838b8de8fe1a1
     controlPlane: true
     networkInterfaces:
       - deviceSelector:
