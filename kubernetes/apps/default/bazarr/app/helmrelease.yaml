@@ -73,7 +73,7 @@ spec:
             sectionName: https
     persistence:
       config:
-        existingClaim: "{{ .Release.Name }}"
+        existingClaim: bazarrr
       media:
         type: nfs
         server: expanse.internal
