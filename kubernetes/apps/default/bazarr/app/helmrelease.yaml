@@ -73,7 +73,7 @@ spec:
             sectionName: https
     persistence:
       config:
-        existingClaim: bazarrr
+        existingClaim: bazarr
       media:
         type: nfs
         server: expanse.internal
