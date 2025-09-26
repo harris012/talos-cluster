@@ -48,7 +48,7 @@ spec:
               capabilities: {drop: ["ALL"]}
             resources:
               requests:
-                cpu: 8m
+                cpu: 7m
               limits:
                 memory: 1Gi
     defaultPodOptions:
@@ -73,7 +73,7 @@ spec:
             sectionName: https
     persistence:
       config:
-        existingClaim: bazarrr
+        existingClaim: "{{ .Release.Name }}"
       media:
         type: nfs
         server: expanse.internal
