@@ -80,6 +80,38 @@ spec:
         # devicePathFilter: /dev/disk/by-id/ata-SD_Ultra_3D_1TB_2522BD401875*
         config:
           osdsPerDevice: "1"
+        onlyApplyOSDPlacement: false
+      disruptionManagement:
+        managePodBudgets: false
+        osdMaintenanceTimeout: 30
+        pgHealthCheckTimeout: 0
+        manageMachineDisruptionBudgets: false
+        machineDisruptionBudgetNamespace: openshift-machine-api
+      healthCheck:
+        daemonHealth:
+          mon:
+            disabled: false
+            interval: 45s
+          osd:
+            disabled: false
+            interval: 60s
+          status:
+            disabled: false
+            interval: 60s
+        livenessProbe:
+          mon:
+            disabled: false
+          mgr:
+            disabled: false
+          osd:
+            disabled: false
+        startupProbe:
+          mon:
+            disabled: false
+          mgr:
+            disabled: false
+          osd:
+            disabled: false
     cephBlockPools:
       - name: ceph-blockpool
         spec:
@@ -128,7 +160,10 @@ spec:
           metadataServer:
             activeCount: 1
             activeStandby: false
-            priorityClassName: system-cluster-critical
+            priorityClassNames:
+              mon: system-node-critical
+              osd: system-node-critical
+              mgr: system-cluster-critical
             placement:
               topologySpreadConstraints:
                 - maxSkew: 1
