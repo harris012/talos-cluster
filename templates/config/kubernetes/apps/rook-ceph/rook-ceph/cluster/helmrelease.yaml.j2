@@ -37,6 +37,7 @@ spec:
       cephConfig:
         global:
           osd_pool_default_size: "1" # for single node cluster
+          osd_crush_chooseleaf_type: "0" # for single node cluster
           bdev_enable_discard: "true" # quote
           bdev_async_discard_threads: "1" # quote
           osd_class_update_on_start: "false" # quote
@@ -83,7 +84,7 @@ spec:
         spec:
           failureDomain: host
           replicated:
-            size: 3
+            size: 1
         storageClass:
           enabled: true
           name: ceph-block
@@ -115,11 +116,13 @@ spec:
         spec:
           metadataPool:
             replicated:
-              size: 3
+              size: 1
+              requireSafeReplicaSize: false
           dataPools:
             - failureDomain: host
               replicated:
-                size: 3
+                size: 1
+                requireSafeReplicaSize: false
               name: data0
           metadataServer:
             activeCount: 1
