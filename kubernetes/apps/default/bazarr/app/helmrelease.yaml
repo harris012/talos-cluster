@@ -9,13 +9,6 @@ spec:
   chartRef:
     kind: OCIRepository
     name: bazarr
-  install:
-    remediation:
-      retries: -1
-  upgrade:
-    cleanupOnFail: true
-    remediation:
-      retries: 3
   values:
     controllers:
       bazarr:
@@ -48,7 +41,7 @@ spec:
               capabilities: {drop: ["ALL"]}
             resources:
               requests:
-                cpu: 7m
+                cpu: 10m
               limits:
                 memory: 1Gi
     defaultPodOptions:

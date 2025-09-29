@@ -123,7 +123,7 @@ spec:
               name: data0
           metadataServer:
             activeCount: 1
-            activeStandby: false
+            activeStandby: true
             priorityClassName: system-cluster-critical
             placement:
               topologySpreadConstraints:
