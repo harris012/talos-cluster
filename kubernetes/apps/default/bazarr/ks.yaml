@@ -21,7 +21,7 @@ spec:
   path: ./kubernetes/apps/default/bazarr/app
   postBuild:
     substitute:
-      APP: *app
+      APP: bazarrr
       VOLSYNC_CAPACITY: 5Gi
   prune: true
   retryInterval: 2m
