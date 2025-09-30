@@ -12,17 +12,17 @@ spec:
   components:
     - ../../../../components/defaults
     #- ../../../../components/gatus/guarded
-    - ../../../../components/nfs-scaler
-    - ../../../../components/volsync
+    #- ../../../../components/nfs-scaler
+    #- ../../../../components/volsync
   dependsOn:
     - name: rook-ceph-cluster
       namespace: rook-ceph
   interval: 1h
   path: ./kubernetes/apps/default/bazarr/app
-  postBuild:
-    substitute:
-      APP: bazarr
-      VOLSYNC_CAPACITY: 5Gi
+  # postBuild:
+  #   substitute:
+  #     APP: bazarr
+  #     VOLSYNC_CAPACITY: 5Gi
   prune: true
   retryInterval: 2m
   sourceRef:
