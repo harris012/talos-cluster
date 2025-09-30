@@ -9,8 +9,7 @@ spec:
   commonMetadata:
     labels:
       app.kubernetes.io/name: *app
-  components:
-    - ../../../../components/defaults
+  #components:
     #- ../../../../components/gatus/guarded
   dependsOn:
     - name: rook-ceph-cluster
