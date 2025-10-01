@@ -83,8 +83,8 @@ spec:
       - name: ceph-blockpool
         spec:
           failureDomain: host
-          replicated:
-            size: 1
+          # replicated:
+          #   size: 1
         storageClass:
           enabled: true
           name: ceph-block
