@@ -88,7 +88,7 @@ spec:
         storageClass:
           enabled: true
           name: ceph-block
-          isDefault: true
+          isDefault: false
           reclaimPolicy: Delete
           allowVolumeExpansion: true
           volumeBindingMode: Immediate
@@ -145,7 +145,7 @@ spec:
                 memory: 4Gi
         storageClass:
           enabled: true
-          isDefault: false
+          isDefault: true
           name: ceph-filesystem
           pool: data0
           reclaimPolicy: Delete
