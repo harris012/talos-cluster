@@ -83,12 +83,12 @@ spec:
       - name: ceph-blockpool
         spec:
           failureDomain: host
-          # replicated:
-          #   size: 1
+          replicated:
+            size: 1
         storageClass:
           enabled: true
           name: ceph-block
-          isDefault: false
+          isDefault: true
           reclaimPolicy: Delete
           allowVolumeExpansion: true
           volumeBindingMode: Immediate
@@ -145,7 +145,7 @@ spec:
                 memory: 4Gi
         storageClass:
           enabled: true
-          isDefault: true
+          isDefault: false
           name: ceph-filesystem
           pool: data0
           reclaimPolicy: Delete
